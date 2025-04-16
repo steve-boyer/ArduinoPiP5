@@ -1,0 +1,43 @@
+Step by step procedure for running a P5 sketch with Arduino
+
+PART 1 - folder preparation
+1 - Create a P5 folder anywhere in your file tree.
+2 - For each new project, create a subfolder with the name of the project
+3 - within the project folder create a folder named myArduinoSketch.
+4 - Copy the myArduinoSketch.ino into this folder.
+5 - Create a folder named ‘public’ in your project folder
+6 - Copy the file ‘serialserver.js’ to your project folder.
+7 - Copy the file ‘myP5Sketch.js to you project/public folder.
+8 - Copy the file ‘index.html’ to your project/public folder.
+
+PART2 - node.js installation and preparation
+1 - If you have not already installed node.js on your local computer install node.js from the
+nodejs.org website.
+2 - Open a terminal window. If you do not know how to use your terminal application please
+see the video guides listed below.
+3 - From the terminal window navigate to the current project folder.
+4 - the following steps need to be repeated each time you create a new project
+4 - type ‘npm init’ and follow the prompts. Accept each of the options.
+5 - type ‘npm install express —save’ and wait for the prompt
+6 - type ‘npm install socket.io —save’ and wait for the prompt
+7 - type ‘npm install serialport —save’ and wait for the prompt.
+
+PART3 - Arduino preparation
+1 - Open the Arduino IDE and upload the code to your Arduino. Make sure the Arduino is
+connected.
+2 - Make a note of the serial port the Arduino is connected to. On a PC it is will be something
+like ‘COM3’ or ‘COM5’. On a mac it will look like ‘/dev/cu.usbmodem11201’ but the numbers
+will be different.
+
+PART4 - Start the server
+1 - In the command line interface navigate to the project folder.
+2 - To start the server type ‘node serialserver.js xxx’ where ‘xxx’ is the name of the serial port
+to which your Arduino is connected.
+3 - If everything is probably set up you should see messages in the terminal window that verify
+a connection to the serialnport.
+
+PART5 - Run the P5 sketch in the browser
+1 - Open up a browser window. Chrome is recommended.
+2 - in the address panel type; ‘localhost:3000’
+3 - If all is setup properly your P5 sketch should now be running and reading data from the
+Arduino.
