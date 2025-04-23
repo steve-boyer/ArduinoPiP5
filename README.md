@@ -37,10 +37,14 @@ localhost:3000
 
 This should run your P5 sketch in the browser and connect the sketch to the Arduino!!!
 
+Autostart the sketch at startup:
+There are several options for autostarting the node server and Chromium browser.
+
 Communication protocol:
 
 Messages between the Arduino and P5 are sent in text form. 
-Messages must be sent as strings wit a newline character. It is up to you to develop the data exchange prototcol adapted to your needs
+Messages must be sent as strings with a newline character. It is up to you to develop the data exchange prototcol adapted to your needs.
+The Arduino code and P5 code should be develped concurrently.
 
 
 
