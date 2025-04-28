@@ -21,10 +21,10 @@ Make sure that the sketch has been uploaded to the arduino
 
 6 - Navigate to the project folder you just created
 
-7 - using the node package manager install express, socket.io and serial:
+7 - using the node package manager install express, socket.io and serialport:
 npm install express --save
 npm install socket.io --save
-npm install serial --save
+npm install serialport --save
 
 8 - from the project folder use the terminal to run the serialserver in node as below
 node serialserver.js <portname>
